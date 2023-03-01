@@ -190,7 +190,8 @@ export const VSlideGroup = genericComponent<new () => {
     const isFocused = ref(false)
     function onFocusin (e: FocusEvent) {
       isFocused.value = true
-
+      // TEMPORARILY DISABLED TO AVOID UNWANTED SCROLLING TO THE BEGINNING OF THE CAROUSEL
+      /*
       if (!isOverflowing.value || !contentRef.value) return
 
       // Focused element is likely to be the root of an item, so a
@@ -210,6 +211,7 @@ export const VSlideGroup = genericComponent<new () => {
           }
         }
       }
+      */
     }
 
     function onFocusout (e: FocusEvent) {
